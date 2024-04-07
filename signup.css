@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: rgb(219, 219, 219);
+}
+.signup-page {
+    width: 1080px;
+    height: 640px;
+    display: flex;
+    position: absolute;
+    background: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.right {
+    width: 50%;
+    background: #F3F5F9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right > .ball {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-color: #623EB9;
+    position: relative;
+} 
+.right::before {
+    content: "";
+    position: absolute;
+    height: 50%;
+    width: 50%;
+    background: rgba( 255, 255, 255, 0.25 );
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 4px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    top: 50%;
+    z-index: 1;
+}
+.left {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.left > .form {
+    padding: 2rem;
+    width: 70%;
+}
+.form > h1 {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    text-align: center;
+    color: #525252;
+}
+.form > h4 {
+    margin-bottom: 1.5rem;
+    color: #888888;
+    text-align: center;
+}
+    
+input {
+    margin: 0.8rem 0;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    background: rgba(168, 154, 255, 0.1);
+    border: 1px solid rgb(142, 167, 247);
+    border-radius: 6px;
+    outline: none;
+}
+input[type="email"]:focus {
+    background: white;
+}
+input[type="text"]:focus {
+    background: white;
+}
+input[type="password"]:focus {
+    background: white;
+}
+input[type="submit"] {
+    margin-top: 2rem;
+    background: rgb(147, 85, 208);
+    color: white;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgb(226, 214, 239);
+}
+.forgot {
+    text-decoration: none;
+    color: #525252;
+}
+.google-auth {
+    border: 2px solid rgb(190, 190, 190);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    width: 58%;
+    cursor: pointer;
+    background: none;
+}
+/* .google-auth:hover {
+    cursor: pointer;
+} */
+.google-auth > img {
+    width: 2rem;
+    margin-right: 0.5rem;
+}
+.signup {
+    margin-top: 4rem;
+}
+.signup > a {
+    text-decoration: none;
+    color: black;
+}
